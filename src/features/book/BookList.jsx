@@ -8,7 +8,6 @@ const BookList = () => {
   const dispatch = useDispatch();
   const handleDeleteBook = (id) => {
     dispatch(deleteBook(id));
-    console.log("clicked");
   };
 
   return (
@@ -39,29 +38,6 @@ const BookList = () => {
             </div>
           </div>
 
-          {/* search */}
-          <div className="relative w-full md:max-w-sm">
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
-              <svg
-                className="h-5 w-5 text-slate-400"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M17.5 17.5L15.4167 15.4167M15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333C11.0005 15.8333 12.6614 15.0929 13.8667 13.8947C15.0814 12.6872 15.8333 11.0147 15.8333 9.16667Z"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-
-            <input
-              type="text"
-              placeholder="Search books..."
-              className="h-12 w-full rounded-2xl border border-slate-800 bg-slate-900 pl-12 pr-4 text-sm text-white outline-none transition-all duration-300 placeholder:text-slate-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
-            />
-          </div>
         </div>
 
         {/*TABLE CARD*/}
@@ -123,7 +99,7 @@ const BookList = () => {
                       <td className="px-6 py-5">
                         <div className="flex items-center justify-center gap-3">
                           {/* edit */}
-                          <Link to={"edit-book"} state={{ book }}>
+                          <Link to={"/edit-book"} state={{ book }}>
                             <button className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-700 bg-slate-800 transition-all duration-300 hover:scale-105 hover:border-yellow-400/40 hover:bg-slate-700">
                               <lord-icon
                                 src="https://cdn.lordicon.com/tobsqthh.json"
@@ -184,11 +160,11 @@ const BookList = () => {
                 {/* buttons */}
                 <div className="mt-5 flex items-center justify-end gap-3">
                   {/* edit */}
-                  <Link to={"edit-book"} state={{ book }}>
-                    <button className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-700 bg-slate-800 transition-all duration-300 hover:scale-105 hover:border-yellow-400/40 hover:bg-slate-700">
+                  <Link to={"/edit-book"} state={{ book }}>
+                    <button className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-700 bg-slate-800 transition-all duration-300 hover:scale-105 hover:border-yellow-400/40 hover:bg-slate-700 cursor-pointer">
                       <lord-icon
                         src="https://cdn.lordicon.com/tobsqthh.json"
-                        trigger="hover"
+                        trigger="loop"
                         colors="primary:#ffffff,secondary:#ffc738,tertiary:#3a3347"
                         style={{ width: "34px", height: "34px" }}
                       ></lord-icon>

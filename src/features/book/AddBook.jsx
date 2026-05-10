@@ -14,7 +14,7 @@ const AddBook = () => {
     e.preventDefault();
     const book = {id, title, author}
     dispatch(addBook(book))
-    navigate("/")
+    navigate("book-list")
   }
   return (
     <div className="bg-[#020617] min-h-screen flex items-center justify-center p-20  ">

@@ -10,8 +10,13 @@ const initialBook = {
     {
       id: crypto.randomUUID(),
       title: "The Clear Quran",
-      author: "Dr.Mustafa Khattab",
+      author: "Dr. Mustafa Khattab",
     },
+    {
+      id: crypto.randomUUID(),
+      title: "Great Women Of Islam",
+      author: "Muhammad Ahmad Gadanfar"
+    }
   ],
 };
 

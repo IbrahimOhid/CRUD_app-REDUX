@@ -7,8 +7,8 @@ const Navbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   const navLinks = [
-    { name: "Book List", path: "/" },
-    { name: "Add Book", path: "/add-book" },
+    {name: "Home", path: "/"},
+    { name: "Book List", path: "/book-list" },
     
   ];
 
